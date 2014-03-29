@@ -52,6 +52,7 @@ var router = {
     var words = [
       'going big or going home.',
       'not predicting the future, inventing it.',      
+      'tunia <3',
       'not overly suave.',
       'the best way is always through.',
       'wanna get in touch?',

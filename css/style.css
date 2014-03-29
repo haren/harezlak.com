@@ -45,7 +45,6 @@ INDEX
 	float: left;
 	width: 200px‏;
 	line-height: 4em;
-	padding-left: 20px;	
 	font-weight: 400;
 }
 
@@ -60,7 +59,7 @@ INDEX
 	opacity: .85;	
 }
 
-#footer ul a {
+#footer ul a {	
 	opacity: .85;
 	transition: opacity .3s ease-in-out;
 }
@@ -73,6 +72,8 @@ INDEX
 	padding: 12px 25px 0;	
 	margin: 0;
 	float: right;
+	min-width: 330px;
+	margin-right: -47px;
 }
 
 #footer li {
@@ -92,10 +93,15 @@ INDEX
   	padding-top: 0px;  	
   	padding-left: 0px;
   	padding-bottom: 15px;
-  	margin-left: 30px;
+  	margin-left: -15px;
   }
 }
 
+@media (max-width: 991px){
+	#fl {
+		padding-left: 0px;		
+	}
+}
 
 
 /*
@@ -105,21 +111,16 @@ BLOG
 */
 
 .content {
-	float: left;	
-	padding-top: 100px;
+	padding-top: 50px;
+	text-align: justify;
 }
 
-.blog #container {
-	width: 1000px;
-}
-
-.blog .aside {
-	float: right;
-	width: 400px;	
-	margin-top: 100px;
-	padding-left: 30px;
-	border-left: 1px solid #DCDCDC;
-	height: 300px;
+@media (min-width: 992px){
+	.nice-border {
+		padding-left: 30px;
+		border-left: 1px solid #DCDCDC;
+		height: 300px;
+	}
 }
 
 .blog #container h1 {
