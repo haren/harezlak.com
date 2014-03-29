@@ -34,12 +34,13 @@ INDEX
 	display: none;
 }
 
-footer {
+#footer {
 	background: #DCDCDC;
 	overflow: hidden;
+	width: 100%;
 }
 
-footer p {
+#fl {
 	display: block;
 	float: left;
 	width: 200px‏;
@@ -48,34 +49,51 @@ footer p {
 	font-weight: 400;
 }
 
-footer p a {
+
+#fl a {
 	color: inherit;
 	transition: opacity .3s ease-in-out;
 }
 
-footer p a:hover {
+#footer p a:hover {
 	color: inherit;
 	opacity: .85;	
 }
 
-footer ul a {
+#footer ul a {
 	opacity: .85;
 	transition: opacity .3s ease-in-out;
 }
 
-footer ul a:hover {
+#footer ul a:hover {
 	opacity: 1;		
 }
 
-footer ul {
-	padding: 18px 25px 0;	
+#footer ul {
+	padding: 12px 25px 0;	
 	margin: 0;
 	float: right;
 }
 
-footer li {
+#footer li {
 	display: inline-block;
 	padding-right: 10px;
+}
+
+
+@media (max-width: 503px) {
+  #fl {
+  	float: none;
+  	padding-left: 0px;
+  }
+
+  #footer ul {
+  	float: none;
+  	padding-top: 0px;  	
+  	padding-left: 0px;
+  	padding-bottom: 15px;
+  	margin-left: 30px;
+  }
 }
 
 
