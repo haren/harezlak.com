@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+	background-color: #F9F9F9;
+}
+
+/*
+
+INDEX
+
+*/
+
+#container {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+	overflow: auto;	
+}
+
+#fruitWrapper, p, h1 {
+	font-family: 'Source Sans Pro';
+}
+
+#fruitWrapper {
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 4em;
+	color: #333;
+	display: none;
+}
+
+footer {
+	background: #DCDCDC;
+	overflow: hidden;
+}
+
+footer p {
+	display: block;
+	float: left;
+	width: 200px‏;
+	line-height: 4em;
+	padding-left: 20px;	
+	font-weight: 400;
+}
+
+footer p a {
+	color: inherit;
+	transition: opacity .3s ease-in-out;
+}
+
+footer p a:hover {
+	color: inherit;
+	opacity: .85;	
+}
+
+footer ul a {
+	opacity: .85;
+	transition: opacity .3s ease-in-out;
+}
+
+footer ul a:hover {
+	opacity: 1;		
+}
+
+footer ul {
+	padding: 18px 25px 0;	
+	margin: 0;
+	float: right;
+}
+
+footer li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+
+
+/*
+
+BLOG
+
+*/
+
+.content {
+	float: left;	
+	padding-top: 100px;
+}
+
+.blog #container {
+	width: 1000px;
+}
+
+.blog .aside {
+	float: right;
+	width: 400px;	
+	margin-top: 100px;
+	padding-left: 30px;
+	border-left: 1px solid #DCDCDC;
+	height: 300px;
+}
+
+.blog #container h1 {
+	padding-bottom: 25px;	
+}
+
+/*@media only screen and (max-device-width: 480px) {
+	body {
+		display: none;
+	}
+}*/
