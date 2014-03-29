@@ -30,11 +30,11 @@ $(function() {
     {
         def: 'easeInElastic',
         easeInElastic: function (x, t, b, c, d) {
-		var s=1.70158;var p=0;var a=c;
-		if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-		if (a < Math.abs(c)) { a=c; var s=p/4; }
-		else var s = p/(2*Math.PI) * Math.asin (c/a);
-		return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+    var s=1.70158;var p=0;var a=c;
+    if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+    if (a < Math.abs(c)) { a=c; var s=p/4; }
+    else var s = p/(2*Math.PI) * Math.asin (c/a);
+    return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
     }
   });
 
@@ -43,14 +43,6 @@ $(function() {
   if (page in router) {
     router[page]();
   }
-
-  // catch screen resolution on start and adjust font size on box height
-  // on start
-  adjustFruitLoop();
-  // on resize
-  $( window ).resize(function() {
-    adjustFruitLoop();
-  });
 
 });
 
@@ -65,22 +57,27 @@ var router = {
       'wanna get in touch?',
       'drop me a line -',
       'the answer though,',
-      'is 42.'
+      'is going to be 42.'
     ];
 
     var fruitWrapper = $('#fruitWrapper'); 
 
-    var centerFruitMachine = function() {
-      var containerHeight = $('#container').innerHeight();    
-
+    var ratio = 0.00296;
+    var adjustFruitMachine = function() {
+      var containerHeight = $('#container').innerHeight();
+      width = $('#fruitWrapper').width();
+      fontSize = width * ratio;
+      fontSize += 'em';
+      
       fruitWrapper.show().css({
-        marginTop: containerHeight/2 - fruitWrapper.height()
+        marginTop: containerHeight/2 - fruitWrapper.height(),
+        fontSize: fontSize
       });
     }
 
-    centerFruitMachine();
+    adjustFruitMachine();
 
-    $(window).on('resize', centerFruitMachine);
+    $(window).on('resize', adjustFruitMachine);
 
     var fruitmachine = $('#fruitmachine');
     var current = -1;
@@ -91,13 +88,7 @@ var router = {
               fruitmachine.html(word).css({marginTop: -250}).animate({marginTop: 0}, 800, 'easeOutElastic');
           });
 
-    }, 5000);
+    }, 3000);
   }
   // blog: 
-}
-
-function adjustFruitLoop() {
-  console.log($(window).height());
-  console.log($(window).width());
-
 }
