@@ -50,15 +50,25 @@ var router = {
   index: function () {
     
     var words = [
-      'going big or going home.',
-      'not predicting the future, inventing it.',      
-      'tunia <3',
-      'not overly suave.',
+      'elegance is an attitude.',
+      'go big or go home.',
+      'do not predict the future, invent it.',      
       'the best way is always through.',
-      'wanna get in touch?',
-      'drop me a line -',
-      'the answer though,',
-      'is going to be 42.'
+      'fail often.',
+      'stand up to live before you sit down to write.',
+      'eyes on the forest, not on the trees.',
+      'find a way or make one.',
+      'the unexamined life is not worth living.',
+      'no victor believes in chance.',
+      'you need to play for a long time to play like yourself.',
+      'why not zoidberg?',
+      "best things in life aren't things.",
+      'doubt everything. find your own light.',
+      'the whole point is to be original.',
+      "don't lose negotiations in your head.",
+      'you miss 100% shots you never take.',
+      'time you enjoy wasting is not wasted.',
+      'still waters run deep.'
     ];
 
     var fruitWrapper = $('#fruitWrapper'); 
